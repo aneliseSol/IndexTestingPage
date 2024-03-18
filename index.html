@@ -1,11 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index Blank</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Influence Intro Version.03- </title>
+<style>
+    /* Some basic styling */
+    .menu {
+        list-style-type: none;
+        padding: 0;
+        
+    }
+    .menu li {
+        cursor: pointer;
+        padding: 5px 10px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        margin-bottom: 5px;
+        overflow:hidden;
+        float: left;
+        display: block;
+        
+    }
+    .menu li:hover {
+        background-color: #e0e0e0;
+    }
+    #content {
+        clear:both;
+        padding: 0px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        margin-top:0px;
+       
+      
+    }
+    h2 {
+        color:blue;
+        margin:5px;
+        
+    }
+
+    .highlight {
+      color:rgb(245, 88, 114); /* Change to the desired color */
+
+</style>
 </head>
 <body>
-    
+    <h2>Hello Sophia!</h2>
+    <ul class="menu">
+        <li id="option1">Capa</li>
+        <li id="option2">Option 2</li>
+        <li id="option3">Option 3</li>
+        <li id="option4">Option 4</li>
+        <li id="option5">Option 5</li>
+        <li id="option6">Option 6</li>
+        <li id="option7">Option 7</li>
+        <li id="option8">Option 8</li>
+        <li id="option9">Option 9</li>
+        <li id="option10">Option 10</li>
+        <li id="option11">Option 11</li>
+        <li id="option12">Option 12</li>
+        <li id="option13">Option 13</li>
+        <li id="option14">Option 14</li>
+        <li id="option15">Option 15</li>
+        <li id="option16">Option 16</li>
+        <li id="option17">Option 17</li>
+        <li id="option18">Option 18</li>
+        <li id="option19">Option 19</li>
+        <li id="option20">Option 20</li>
+        <li id="option21">Option 21</li>
+        <li id="option22">Option 22</li>
+        <li id="option23">Option 23</li>
+        <li id="option24">Option 24</li>
+        <li id="option25">Option 25</li>
+        <li id="option26">Option 26</li>
+        <li id="option27">Option 27</li>
+        <li id="option28">Option 28</li>
+        <li id="option29">Option 29</li>
+        <li id="option30">Option 30</li>
+        <li id="option31">Option 31</li>
+        <li id="option32">Option 32</li>
+    </ul>
+    <div id="content">
+        <img src='image1.jpg' alt='image 1'>
+    </div>
+
+    <script>
+
+        // Get references to menu items and content area
+        const content = document.getElementById('content');
+        const menuItems = document.querySelectorAll('.menu li');
+
+        // Define content for each option
+        const optionContent = {};
+
+        for (let i = 1; i <= 32; i++) {
+            optionContent[`option${i}`] = `<h2>This is the content for <span class='highlight'>Option ${i}.</span></h2><img src='image${i}.jpg' alt='image ${i}'>`;
+        }
+
+        // Function to update content based on selected option
+        function updateContent(option) {
+            content.innerHTML = optionContent[option];
+        }
+
+        // Event listeners for menu items
+        menuItems.forEach((menuItem, index) => {
+            menuItem.addEventListener('click', () => {
+                updateContent(`option${index + 1}`);
+            });
+        });
+        
+
+    </script>
 </body>
 </html>
